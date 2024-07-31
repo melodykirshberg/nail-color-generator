@@ -1,0 +1,36 @@
+p#notice
+  = notice
+h1
+  | Polishes
+table
+  thead
+    tr
+      th
+        | Name
+      th
+        | Brand
+      th
+        | Color
+      th
+        | Type
+      th
+        | Actions
+  tbody
+    - @polishes.each do |polish|
+      tr
+        td
+          = polish.name
+        td
+          = polish.brand
+        td
+          = polish.color
+        td
+          = polish.polish_type
+        td
+          = link_to 'Show', polish
+        td
+          = link_to 'Edit', edit_polish_path(polish)
+        td
+          = link_to 'Destroy', polish, method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to 'New Polish', new_polish_path

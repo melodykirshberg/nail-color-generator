@@ -1,0 +1,17 @@
+p#notice
+  = notice
+= link_to 'Edit', edit_polish_path(@polish)
+|  | 
+= link_to 'Back', polishes_path
+p
+  | Name: 
+  = @polish.name
+p
+  | Brand: 
+  = @polish.brand
+p
+  | Color: 
+  = @polish.color
+p
+  | Type: 
+  = @polish.polish_type
